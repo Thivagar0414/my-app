@@ -8,7 +8,6 @@ node{
       sh "${mvnHome}/bin/mvn clean package"
 	  sh 'mv target/myweb*.war target/newapp.war'
    }
-   }
    stage('Build Docker Imager'){
    sh 'docker build -t thivagad/myweb:0.0.2 .'
    }
